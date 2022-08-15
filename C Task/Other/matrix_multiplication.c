@@ -2,7 +2,7 @@
 int main()
 {
     int i, j, c[i][j], a[i][j], b[i][j], row1, col1, row2, col2;
-    c[0][0] = 0;
+    // c[0][0] = 0;
     printf("Enter row of first matrix : \n");
     scanf("%d", &row1);
     printf("Enter column of first matrix : \n");

@@ -2,17 +2,17 @@
 int main()
 {
     int i, j, temp, num;
-    int a[4];
-    for (i = 0; i < 7; i++)
+    int a[5];
+    for (i = 0; i < 5; i++)
     {
         printf("enter %d index element : ", i);
         scanf("%d", &a[i]);
     }
-    for (i = 0; i < 7; i++)
+    for (i = 0; i < 5; i++)
     {
         printf("%d ", a[i]);
     }
-    printf("enter 1 for ascending order\n");
+    printf("\nenter 1 for ascending order\n");
     printf("enter 2 for descending order\n");
     scanf("%d", &num);
 
