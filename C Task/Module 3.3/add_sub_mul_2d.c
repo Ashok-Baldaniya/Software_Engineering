@@ -1,8 +1,9 @@
 #include <stdio.h>
 int main()
 {
-    int i, j, input;
-    int a[2][2], b[2][2], c[2][2];
+    int i, j, k, input;
+    int a[2][2], b[2][2];
+    int c[i][j] = 0;
 
     printf("enter first matrix element\n");
     for (i = 0; i < 2; i++)
@@ -44,7 +45,7 @@ int main()
     printf("enter input 1 for addition\n");
     printf("enter input 2 for subtraction\n");
     printf("enter input 3 for multiplication\n");
-    scanf("%d",&input);
+    scanf("%d", &input);
     printf("\n\n");
     switch (input)
     {
@@ -72,17 +73,20 @@ int main()
         }
         break;
 
-        // case 3:
-        //     for (i = 0; i < 2; i++)
-        //     {
-        //         for (j = 0; j < 2; j++)
-        //         {
-        //             c[i][j] = a[i][j] - b[i][j];
-        //             printf("%d", c[i][j]);
-        //         }
-        //         printf("\n");
-        //     }
-        //     break;
+    case 3:
+        for (i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                for (k = 0; k < 2; k++)
+                {
+                    c[i][j] = c[i][j] + a[i][k] * b[k][j];
+                    printf("%d ", c[i][j]);
+                }
+            }
+            printf("\n");
+        }
+        break;
 
     default:
         printf("plz enter valid option");
