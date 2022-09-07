@@ -3,47 +3,51 @@ using namespace std;
 class student
 {
 protected:
-    int rnumber;
+    int id;
+    string name;
 
 public:
-    void setn(int rnumber)
+    void setnid(int id, string name)
     {
-        this->rnumber = rnumber;
+        this->id = id;
+        this->name = name;
     }
 };
 
-class test
+class mark : public student
 {
 protected:
-    int m1, m2;
-    int tmark;
+    float m1, m2, m;
 
 public:
-    void setm(int m1, int m2, int tmark)
+    void setmark(float m1, float m2)
     {
         this->m1 = m1;
         this->m2 = m2;
-        this->tmark = tmark;
+        m = m1 + m2;
     }
 };
 
-class result : public student, public test
+class result : public mark
 {
 
 public:
     void display()
     {
-        cout << "the roll number of student is " << rnumber << endl;
-        cout << "the mark obtain in two subject is " << m1 + m2 << endl;
-        cout << "the total mark is " << tmark << endl;
+        cout << "the id of student is " << id << endl;
+        cout << "the name of student is " << name << endl;
+        cout << "the mark of sub 1 is " << m1 << endl;
+        cout << "the mark of sub 2 is " << m2 << endl;
+        cout << "the total mark is " << m << endl;
+        cout << "the percentage is " << m / 2 << endl;
     }
 };
 
 int main()
 {
-    result o1;
-    o1.setn(1);
-    o1.setm(60, 70, 200);
-    o1.display();
+    result r;
+    r.setnid(101, "ashok");
+    r.setmark(70, 60);
+    r.display();
     return 0;
 }

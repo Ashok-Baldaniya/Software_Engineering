@@ -17,13 +17,14 @@ public:
 class student
 {
 protected:
-    int m1, m2;
+    int m1, m2,m;
 
 public:
     void setm(int m1, int m2)
     {
         this->m1 = m1;
         this->m2 = m2;
+        m=m1+m2;
     }
 };
 
@@ -36,8 +37,8 @@ public:
 
         cout << "the name of student is " << name << endl;
         cout << "the id of student is " << id << endl;
-        cout << "the mark1 and mark2 of student is " << m1 << " " << m2 << endl;
-        cout << "the percentage of student is " << (m1 + m2) / 2 << endl;
+        cout << "the mark1 of student is " << m1 << " and mark2 is  " << m2 << endl;
+        cout << "the percentage of student is " << m / 2 << endl;
     }
 };
 int main()
